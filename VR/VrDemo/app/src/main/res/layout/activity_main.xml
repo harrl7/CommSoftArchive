@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="bit.harrl7.vrdemo.SimpleVrPanoramaActivity"
+    android:background="@android:color/black">
+
+    <ProgressBar
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/progBarGoodAngle"
+        android:progress="0"
+        android:max="200"
+        android:visibility="visible"
+        android:indeterminate="false"
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/view"/>
+
+    <View
+        android:background="@color/colorPrimaryDark"
+        android:layout_height="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/goodAngleBarCentre"
+        android:alpha="0.7"
+        android:layout_width="50dp"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="80dp"
+        android:layout_margin="25dp">
+
+        <com.google.vr.sdk.widgets.pano.VrPanoramaView
+            android:id="@+id/pano_view"
+            android:layout_width="match_parent"
+            android:scrollbars="@null"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="40dp">
+
+            <TextView
+                android:text="TextView"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtAccel"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="18sp"
+                android:layout_width="100dp"/>
+        </com.google.vr.sdk.widgets.pano.VrPanoramaView>
+    </FrameLayout>
+
+    <Button
+        android:text="Full Screen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnNext"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
